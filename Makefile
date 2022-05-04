@@ -1,18 +1,26 @@
-11: Lec2_3/Program1/program1.c
-	gcc -o 11.out Lec2_Lec3/Program1/program1.c
+all: Lec2_3 Lec4
 
-22: Lec2_3/Program2/Program2.c
-	gcc -o 22.out Lec2_Lec3/Program2/Program2.c
+Lec2_3: Program1 Program2 Program3
 
-33: Lec2_3/Program3/Program3.c
-	gcc -o 33.out Lec2_Lec3/Program3/Program3.c
+lec4: program4 program5 program6
 
+Program1:
+	gcc 'Lec2_3/Program1/program1.c' -o 'Lec2_3/Program1/program1.out'
 
-44: Lec4/Program1/Program4.c
-	gcc -o 44.out Lec4/Program4/Program4.c
+Program2:
+	gcc Lec2_3/Program2/program2.c' -o 'Lec2_3/Program2/program2.out'
 
-55: Lec4/Program2/Program5.c
-	gcc -o 55.out Lec4/Program5/Program5.c
+Program3:
+	gcc 'Lec2_3/Program3/program3.c' -o 'Lec2_3/Program3/program3.out'
 
-66: Lec4/Program3/Program6.c
-	gcc -o 66.out Lec4/Program6/Program6.c
+Program4:
+	gcc 'Lec4/program4/program4.c' -o 'Lec4/program4/program4.out'
+
+Program5:
+	gcc 'Lec4/program5/program5.c' -o 'Lec4/program5/program5.out'
+
+Program6:
+	gcc 'Lec4/program6/program6.c' -o 'Lec4/program6/program6.out'
+
+clear:
+	rm -rf lec?/program*/*.out
