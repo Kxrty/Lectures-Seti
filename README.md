@@ -9,3 +9,14 @@
 + Mac OS - не уверен.
 ### <a name="За что отвечает каждый код">За что отвечает каждый код.</a>
 ___
+## 1 Код
+Сначала нас просят ввести длину массива, после этого выделяется память. 
+Test 2
+```
+Enter length of array: 10  
+Allocated 40 bytes  
+```
+Test 3
+```
+Enter length of array: -25  
+Error: can't allocate memory: Not enough space
